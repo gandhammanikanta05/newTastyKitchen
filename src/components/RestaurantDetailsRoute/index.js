@@ -95,7 +95,7 @@ class RestaurantDetailsRoute extends Component {
   // restaurant loader
 
   restaurantsDisplayLoading = () => (
-    <div className={Loader}>
+    <div testid="restaurant-details-loader" className={Loader}>
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </div>
   )
@@ -161,7 +161,7 @@ class RestaurantDetailsRoute extends Component {
 
     // console.log(foodItems)
     return (
-      <ul className="unordered-list">
+      <ul testid="foodItem" className="unordered-list">
         {foodItems.map(eachItem => (
           <FoodItem key={eachItem.id} foodItem={eachItem} />
         ))}

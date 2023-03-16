@@ -120,16 +120,22 @@ class FoodItem extends Component {
           {isFound ? (
             <div className="each-item-counter-container" id={foodItem.id}>
               <button
+                testid="decrement-count"
                 type="button"
                 className="minus-icon-container"
                 onClick={this.decrementCartItemQuantity}
               >
                 <HiOutlineMinusSm className="minus-icon" />
               </button>
-              <button type="button" className="count-value">
+              <button
+                testid="active-count"
+                type="button"
+                className="count-value"
+              >
                 {quantity}
               </button>
               <button
+                testid="increment-count"
                 type="button"
                 className="plus-icon-container"
                 onClick={this.incrementCartItemQuantity}
